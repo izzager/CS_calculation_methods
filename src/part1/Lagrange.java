@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 import static utilits.Utilits.getNewX;
 
+//решение интерполяционного многочлена в форме Лагранжа
 public class Lagrange {
+
     public static ArrayList<Pair<Double, Double>> getLagrange(ArrayList<Pair<Double, Double>> f) {
         //создали массив, состоящих из узловых точек и точек между ними
         ArrayList<Double> newXs = getNewX(f);

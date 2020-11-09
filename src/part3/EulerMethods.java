@@ -100,4 +100,18 @@ public class EulerMethods {
         System.out.println();
         System.out.println();
     }
+
+    public static void showWork() {
+        ArrayList<Double> x = getX(1.0, 10);
+        ArrayList<Double> yt = getYTochonoe(1.0, 10);
+        ArrayList<Double> y1 = methodEuler(1.0, 4.0, 10);
+        ArrayList<Double> y2 = upgradeMethodEuler(1.0, 4.0, 10);
+        ArrayList<Double> y3 = methodPreditorCorrector(1.0, 4.0, 10);
+        System.out.println("Классический метод Эйлера");
+        getTable(x, yt, y1);
+        System.out.println("Улучшенный метод Эйлера");
+        getTable(x, yt, y2);
+        System.out.println("Метод предитора-корректора");
+        getTable(x, yt, y3);
+    }
 }

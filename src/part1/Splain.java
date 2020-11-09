@@ -8,6 +8,7 @@ import static part2.Gauss.methodGauss0;
 import static utilits.Utilits.readF;
 
 public class Splain {
+    //кубические сплайны
     public static ArrayList<ArrayList<Double>> getSLAYSplain(ArrayList<Pair<Double, Double>> f) {
         ArrayList<ArrayList<Double>> matr = new ArrayList<>();
         ArrayList<Double> free = new ArrayList<>();
@@ -116,14 +117,14 @@ public class Splain {
         }
     }
 
-    public static void showWork() {
-        ArrayList<Pair<Double, Double>> f = readF();
+    //решение матрицы коэффициентов кубического сплайна методом Гаусса
+    public static void showWork(ArrayList<Pair<Double, Double>> f) {
         ArrayList<Double> x = methodGauss0(Splain.getSLAYSplain(f));
         System.out.println(x);
     }
 
-    public static void showWork(ArrayList<Pair<Double, Double>> f) {
-        ArrayList<Double> x = methodGauss0(Splain.getSLAYSplain(f));
-        System.out.println(x);
+    public static void showWork() {
+        ArrayList<Pair<Double, Double>> f = readF();
+        showWork(f);
     }
 }

@@ -1,4 +1,5 @@
 import part2.MethodSimpleIteration;
+import part3.EulerMethods;
 
 import java.util.ArrayList;
 
@@ -27,13 +28,6 @@ public class Main {
 
         //MethodSimpleIteration.showWork();
 
-        ArrayList<Double> x = getX(1.0, 10);
-        ArrayList<Double> yt = getYTochonoe(1.0, 10);
-        ArrayList<Double> y1 = methodEuler(1.0, 4.0, 10);
-        ArrayList<Double> y2 = upgradeMethodEuler(1.0, 4.0, 10);
-        ArrayList<Double> y3 = methodPreditorCorrector(1.0, 4.0, 10);
-        getTable(x, yt, y1);
-        getTable(x, yt, y2);
-        getTable(x, yt, y3);
+        EulerMethods.showWork();
     }
 }

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 import static utilits.Utilits.getNewX;
 
-
+//решение интерполяционного многочлена в форме Ньютона
 public class Newton {
-    public static ArrayList<ArrayList<Double>> getRazdelRazn(ArrayList<Pair<Double, Double>> f) {
+    private static ArrayList<ArrayList<Double>> getRazdelRazn(ArrayList<Pair<Double, Double>> f) {
         ArrayList<Double> xk = Pair.getFirstsFromArrayList(f);
 
         ArrayList<ArrayList<Double>> res = new ArrayList<>();

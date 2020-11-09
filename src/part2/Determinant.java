@@ -13,6 +13,7 @@ import static utilits.Utilits.multMatrColumn;
 
 public class Determinant {
 
+    //подсчет определителя матрицы через метод Гаусса
     public static double getDeterminant(ArrayList<ArrayList<Double>> matr) {
         int n = matr.size();
         ArrayList<ArrayList<Double>> res = new ArrayList<>();
@@ -84,7 +85,8 @@ public class Determinant {
         }
     }
 
-    public static ArrayList<ArrayList<Double>> getWithoutIJMatr(ArrayList<ArrayList<Double>> matr, int i, int j) {
+    //получение матрицы из исходной вычеркиванием i строки и j столбца
+    private static ArrayList<ArrayList<Double>> getWithoutIJMatr(ArrayList<ArrayList<Double>> matr, int i, int j) {
         ArrayList<ArrayList<Double>> res = new ArrayList<>();
         int n = matr.size();
         for (int k = 0; k < i; k++) {
@@ -108,7 +110,8 @@ public class Determinant {
         return res;
     }
 
-    public static ArrayList<ArrayList<Double>> getAlgebrDopolnMatr(ArrayList<ArrayList<Double>> matr) {
+    //подсчитывание матрицы алгебраических дополнений
+    private static ArrayList<ArrayList<Double>> getAlgebrDopolnMatr(ArrayList<ArrayList<Double>> matr) {
         int n = matr.size();
         ArrayList<ArrayList<Double>> res = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -124,6 +127,7 @@ public class Determinant {
         return res;
     }
 
+    //получение обратной матрицы
     public static ArrayList<ArrayList<Double>> getObratnMatr(ArrayList<ArrayList<Double>> matr) {
         double det = getDeterminant(matr);
         ArrayList<ArrayList<Double>> dopoln = getAlgebrDopolnMatr(matr);
@@ -138,12 +142,14 @@ public class Determinant {
         return Utilits.getTransponirMatr(res);
     }
 
+    //решение матричной системы Ax=b, где А - матрица, b - вектор-столбец
     public static ArrayList<Double> getX(ArrayList<ArrayList<Double>> matr, ArrayList<Double> str) {
         ArrayList<ArrayList<Double>> obratMatr = getObratnMatr(matr);
         return multMatrColumn(obratMatr, str);
     }
 
-    public static ArrayList<Double> getColumnWith1inK(int k, int n) {
+    //вектор-столбец с единицей в к-той позиции, остальные элементы - нули
+    private static ArrayList<Double> getColumnWith1inK(int k, int n) {
         ArrayList<Double> str = new ArrayList<>();
         for (int i = 0; i < k; i++) {
             str.add(0.0);
@@ -155,12 +161,13 @@ public class Determinant {
         return str;
     }
 
-    public static ArrayList<Double> getAkColumn(ArrayList<ArrayList<Double>> matr, int k) {
+    //постолбцовое нахождение обратной матрицы
+    private static ArrayList<Double> getAkColumn(ArrayList<ArrayList<Double>> matr, int k) {
         ArrayList<Double> str = getColumnWith1inK(k, matr.size());
         return methodGauss0(getMatrAb(matr, str));
     }
 
-    public static ArrayList<ArrayList<Double>> getObrMatrMulti(ArrayList<ArrayList<Double>> matr) {
+    private static ArrayList<ArrayList<Double>> getObrMatrMulti(ArrayList<ArrayList<Double>> matr) {
         ArrayList<ArrayList<Double>> obr = new ArrayList<>();
         int n = matr.size();
         for (int i = 0; i < n; i++) {
@@ -169,6 +176,7 @@ public class Determinant {
         return getTransponirMatr(obr);
     }
 
+    //решение Ax=b без использования определителя для нахождения обратной матрицы
     public static ArrayList<Double> getXWithoutDeterm(ArrayList<ArrayList<Double>> matr, ArrayList<Double> str) {
         ArrayList<ArrayList<Double>> obratMatr = getObrMatrMulti(matr);
         return multMatrColumn(obratMatr, str);

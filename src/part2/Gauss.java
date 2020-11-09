@@ -152,7 +152,6 @@ public class Gauss {
     }
 
 
-//[1.0, 2.5, 0.0, -0.5, 4.0, 4.0, 1.5, 0.5]
     public static void print(int n) {
         System.out.println("Матрица А:");
         ArrayList<ArrayList<Double>> A = getMatrAVariant(n);
