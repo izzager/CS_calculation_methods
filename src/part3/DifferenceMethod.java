@@ -15,18 +15,16 @@ public class DifferenceMethod {
 
     public static ArrayList<Double> getXWithH(int n) {
         //x с номерами от 0 до n
-        ArrayList<Double> x = Utilits.getXWithH(0.0, n + 1, h);
-        return x;
+        return Utilits.getXWithH(0.0, n + 1, h);
     }
 
     //x с номерами от 1 до n - 1
     public static ArrayList<Double> getXWithHWithoutFirstAndLast(int n) {
         ArrayList<Double> x = getXWithH(n);
-        ArrayList<Double> x2 = IntStream
+        return IntStream
                 .range(1, x.size() - 1)
                 .mapToObj(x::get)
                 .collect(Collectors.toCollection(ArrayList::new));
-        return x2;
     }
 
     //f(x) для x с номерами от 0 до n
@@ -44,11 +42,10 @@ public class DifferenceMethod {
     //f(x) для x с номерами от 1 до n-1
     public static ArrayList<Double> fWithoutFirstAndLast(ArrayList<Double> x) {
         ArrayList<Double> f = f(x);
-        ArrayList<Double> f2 = IntStream
+        return IntStream
                 .range(1, x.size() - 1)
                 .mapToObj(f::get)
                 .collect(Collectors.toCollection(ArrayList::new));
-        return f2;
     }
 
     public static double p(double x) { return x * x; }
