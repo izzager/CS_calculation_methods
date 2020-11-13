@@ -4,7 +4,6 @@ import Pair.Pair;
 
 import java.util.ArrayList;
 
-import static part2.Gauss.methodGauss0;
 import static utilits.Utilits.readF;
 
 public class SLAY {

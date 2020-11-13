@@ -153,4 +153,47 @@ public class Utilits {
         }
         return matrAb;
     }
+
+    public static ArrayList<Double> getXWithH(double x0, int n, double h) {
+        ArrayList<Double> x = new ArrayList<>();
+        double xk = x0;
+        for (int i = 1; i <= n; i++) {
+            x.add(xk);
+            xk += h;
+        }
+        return x;
+    }
+
+    public static ArrayList<Double> getE(ArrayList<Double> yt, ArrayList<Double> y) {
+        ArrayList<Double> e = new ArrayList<>();
+        for (int i = 0; i < yt.size(); i++) {
+            e.add(Math.abs(yt.get(i) - y.get(i)));
+        }
+        return e;
+    }
+
+    public static void getTable(ArrayList<Double> x, ArrayList<Double> yt, ArrayList<Double> y) {
+        System.out.print("x:     ");
+        for (double xs : x) {
+            System.out.format("%8.3f", xs);
+        }
+        System.out.println();
+        System.out.print("y мет: ");
+        for (double ys : y) {
+            System.out.format("%8.3f", ys);
+        }
+        System.out.println();
+        System.out.print("y точн:");
+        for (double ys : yt) {
+            System.out.format("%8.3f", ys);
+        }
+        System.out.println();
+        System.out.print("e:     ");
+        ArrayList<Double> e = getE(yt, y);
+        for (double es : e) {
+            System.out.format("%8.3f", es);
+        }
+        System.out.println();
+        System.out.println();
+    }
 }

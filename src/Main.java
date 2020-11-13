@@ -1,14 +1,15 @@
-import part2.MethodSimpleIteration;
-import part3.EulerMethods;
+import part3.DifferenceMethod;
 
 import java.util.ArrayList;
 
-import static part3.EulerMethods.*;
+import static part2.Gauss.methodGauss0;
+import static part3.DifferenceMethod.*;
+import static utilits.Utilits.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        //ArrayList<Pair<Double, Double>> f = Utilits.readF();
+        //ArrayList<java.Pair<Double, Double>> f = Utilits.readF();
         //int n = f.size() - 1;
 
         //Utilits.printF(f);
@@ -28,6 +29,8 @@ public class Main {
 
         //MethodSimpleIteration.showWork();
 
-        EulerMethods.showWork();
+        //EulerMethods.showWork();
+
+        DifferenceMethod.showWork();
     }
 }
