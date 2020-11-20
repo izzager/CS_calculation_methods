@@ -13,14 +13,13 @@ public class DifferenceMethod {
     public static final double h = 0.4;
     public static final double T = variant;
 
-    public static ArrayList<Double> getXWithH(int n) {
+    public static ArrayList<Double> getXWithH(int n, double h) {
         //x с номерами от 0 до n
         return Utilits.getXWithH(0.0, n + 1, h);
     }
 
     //x с номерами от 1 до n - 1
-    public static ArrayList<Double> getXWithHWithoutFirstAndLast(int n) {
-        ArrayList<Double> x = getXWithH(n);
+    public static ArrayList<Double> getXWithHWithoutFirstAndLast(ArrayList<Double> x) {
         return IntStream
                 .range(1, x.size() - 1)
                 .mapToObj(x::get)
@@ -40,10 +39,9 @@ public class DifferenceMethod {
     }
 
     //f(x) для x с номерами от 1 до n-1
-    public static ArrayList<Double> fWithoutFirstAndLast(ArrayList<Double> x) {
-        ArrayList<Double> f = f(x);
+    public static ArrayList<Double> fWithoutFirstAndLast(ArrayList<Double> f) {
         return IntStream
-                .range(1, x.size() - 1)
+                .range(1, f.size() - 1)
                 .mapToObj(f::get)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
@@ -52,9 +50,9 @@ public class DifferenceMethod {
 
     public static double q(double x) { return x; }
 
-    public static ArrayList<ArrayList<Double>> getDifferenceScheme(int n) {
+    public static ArrayList<ArrayList<Double>> getDifferenceScheme(int n, ArrayList<Double> x, double h) {
         //разностная схема строится x с номерами от 1 до n-1
-        ArrayList<Double> x = getXWithHWithoutFirstAndLast(n);
+        //ArrayList<Double> x = getXWithHWithoutFirstAndLast(n);
         n--; //т.к. n-1
         ArrayList<ArrayList<Double>> scheme = new ArrayList<>();
 
@@ -112,9 +110,9 @@ public class DifferenceMethod {
 
     public static void showWork() {
         int n = 10;
-        ArrayList<ArrayList<Double>> scheme = getDifferenceScheme(n);
-        ArrayList<Double> x = getXWithH(n);
-        ArrayList<Double> f = fWithoutFirstAndLast(x);
+        ArrayList<Double> x = getXWithH(n, h);
+        ArrayList<ArrayList<Double>> scheme = getDifferenceScheme(n, getXWithHWithoutFirstAndLast(x), h);
+        ArrayList<Double> f = fWithoutFirstAndLast(f(x));
         getTable(x, getYTochnoe(x), differenceMethod(scheme, f));
     }
 

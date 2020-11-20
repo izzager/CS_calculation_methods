@@ -1,4 +1,5 @@
 import part3.DifferenceMethod;
+import part3.OdnorodnayaZadacha;
 
 import java.util.ArrayList;
 
@@ -32,5 +33,7 @@ public class Main {
         //EulerMethods.showWork();
 
         DifferenceMethod.showWork();
+
+        OdnorodnayaZadacha.showWork();
     }
 }
