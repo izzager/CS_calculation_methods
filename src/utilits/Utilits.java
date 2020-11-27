@@ -175,23 +175,23 @@ public class Utilits {
     public static void getTable(ArrayList<Double> x, ArrayList<Double> yt, ArrayList<Double> y) {
         System.out.print("x:     ");
         for (double xs : x) {
-            System.out.format("%8.3f", xs);
+            System.out.format("%10.5f", xs);
         }
         System.out.println();
         System.out.print("y мет: ");
         for (double ys : y) {
-            System.out.format("%8.3f", ys);
+            System.out.format("%10.5f", ys);
         }
         System.out.println();
         System.out.print("y точн:");
         for (double ys : yt) {
-            System.out.format("%8.3f", ys);
+            System.out.format("%10.5f", ys);
         }
         System.out.println();
         System.out.print("e:     ");
         ArrayList<Double> e = getE(yt, y);
         for (double es : e) {
-            System.out.format("%8.3f", es);
+            System.out.format("%10.5f", es);
         }
         System.out.println();
         System.out.println();

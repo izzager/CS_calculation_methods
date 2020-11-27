@@ -124,6 +124,10 @@ public class Gauss {
         return xs;
     }
 
+    public static ArrayList<Double> methodGauss0(ArrayList<ArrayList<Double>> matrA, ArrayList<Double> b) {
+        return methodGauss0((getMatrAb(matrA, b)));
+    }
+
     public static ArrayList<Double> methodGauss0(ArrayList<ArrayList<Double>> matrAb) {
         int n = matrAb.size();
         Pair<ArrayList<Pair<Integer, Integer>>, ArrayList<ArrayList<Double>>> pair = pryamoiHod0(matrAb);
