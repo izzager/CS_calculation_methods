@@ -1,13 +1,6 @@
-import part3.DifferenceMethod;
-import part3.OdnorodnayaZadacha;
-import part3.UndefinedCoefficientsMethod;
+import part4.IntegralEquationDegenerateCore;
 
-import java.util.ArrayList;
-
-import static part2.Gauss.methodGauss0;
-import static part3.DifferenceMethod.*;
-import static part3.UndefinedCoefficientsMethod.getSLAY;
-import static utilits.Utilits.*;
+import static part4.IntegralEquationDegenerateCore.getX;
 
 public class Main {
 
@@ -38,6 +31,8 @@ public class Main {
 
         //OdnorodnayaZadacha.showWork();
 
-        UndefinedCoefficientsMethod.showWork();
+        //UndefinedCoefficientsMethod.showWork();
+
+        IntegralEquationDegenerateCore.showWork();
     }
 }
