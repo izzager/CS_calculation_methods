@@ -47,7 +47,7 @@ public class IntegralEquationDegenerateCore {
 
         slay.add(new ArrayList<>());
         slay.get(1).add(0.25);
-        slay.get(1).add(1.0 + 0.2 );
+        slay.get(1).add(1.0 + 0.2);
         slay.get(1).add(1.0 / 6.0);
         slay.get(1).add(5.0 / 3.0);
 
@@ -55,7 +55,7 @@ public class IntegralEquationDegenerateCore {
         slay.get(2).add(0.2);
         slay.get(2).add(1.0 / 6.0);
         slay.get(2).add(1.0 + 1.0 / 7.0);
-        slay.get(2).add(401.0 / 210.0);
+        slay.get(2).add(283.0 / 210.0);
         return slay;
     }
 
@@ -63,7 +63,7 @@ public class IntegralEquationDegenerateCore {
          ArrayList<Double> y = new ArrayList<>();
          ArrayList<Double> q = methodGauss0(getSLAY());
          ArrayList<Double> f = getF(x);
-
+         System.out.println(q);
          double sum;
          int j = 0;
          for (double xi : x) {
