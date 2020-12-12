@@ -47,6 +47,7 @@ public class Newton {
     }
 
     public static void print(ArrayList<Pair<Double, Double>> f) {
+        System.out.println("1.3 Интерполяционный многочлен в форме Ньютона");
         ArrayList<ArrayList<Double>> res = getRazdelRazn(f);
         System.out.println("Разделенные разности для многочлена в форме Ньютона:");
         for (ArrayList<Double> arr: res) {
@@ -63,5 +64,6 @@ public class Newton {
             System.out.println("x" + i + " = " + pair.getFirst() + " f(" + pair.getFirst() + ") = " + pair.getSecond());
             i++;
         }
+        System.out.println();
     }
 }

@@ -109,6 +109,7 @@ public class DifferenceMethod {
     }
 
     public static void showWork() {
+        System.out.println("3.2 Разностный метод решения краевой задачи для ОДУ второго порядка");
         int n = 10;
         ArrayList<Double> x = getXWithH(n, h);
         ArrayList<ArrayList<Double>> scheme = getDifferenceScheme(n, getXWithHWithoutFirstAndLast(x), h);

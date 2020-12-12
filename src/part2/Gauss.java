@@ -185,10 +185,12 @@ public class Gauss {
     }
 
     public static void showWork() {
+        System.out.println("2.1 Метод Гаусса решения СЛАУ");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите n: ");
         int n = scanner.nextInt();
         ArrayList<Double> xs = methodGauss0(getMatrAb(getMatrAVariant(n), getMatrB(n)));
         System.out.println(xs);
+        System.out.println();
     }
 }

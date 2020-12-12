@@ -84,6 +84,7 @@ public class UndefinedCoefficientsMethod {
     }
 
     public static void showWork() {
+        System.out.println("3.4 Метод неопределенных коэффициентов");
         ArrayList<Double> x =  getXWithH(n, h);
         ArrayList<ArrayList<Double>> A = getSLAY();
         ArrayList<Double> Ak = getAk(A, f(x));

@@ -183,6 +183,7 @@ public class Determinant {
     }
 
     public static void showWork() {
+        System.out.println("2.2 Нахождение решения СЛАУ через обратную матрицу");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите n: ");
         int n = scanner.nextInt();
@@ -190,10 +191,15 @@ public class Determinant {
         ArrayList<Double> strB = getMatrB(n);
         ArrayList<ArrayList<Double>> matrAb = getMatrAb(matrA, strB);
         ArrayList<Double> xs = methodGauss0(matrAb);
+        System.out.print("x: ");
         System.out.println(xs);
+        System.out.print("A: ");
         System.out.println(matrA);
+        System.out.print("det A: ");
         System.out.println(Determinant.getDeterminant(matrA));
+        System.out.print("A^(-1): ");
         System.out.println(Determinant.getObratnMatr(matrA));
+        System.out.print("A^(-1): ");
         System.out.println(getObrMatrMulti(matrA));
         System.out.println("!!!!!!!НАХОЖДЕНИЕ Х ЧЕРЕЗ УМНОЖЕНИЕ НА ОБРАТНУЮ МАТРИЦУ, ПОЛУЧЕННУЮ ИЗ МИНОРОВ!!!!!!");
         System.out.println(Determinant.getX(matrA, strB));
@@ -202,5 +208,6 @@ public class Determinant {
         System.out.println("Проверка того, что постолбцовая матрицу удовлетворяет свойству A*A-1=E и наоборот");
         System.out.println(make0(multMatrMatr(matrA, getObrMatrMulti(matrA))));
         System.out.println(make0(multMatrMatr(getObrMatrMulti(matrA), matrA)));
+        System.out.println();
     }
 }

@@ -22,12 +22,15 @@ public class SLAY {
     }
 
     public static void showWork(ArrayList<Pair<Double, Double>> f) {
+        System.out.println("1.1 СЛАУ");
         ArrayList<Pair<Double, Double>> slay = getSLAY(f);
         System.out.println(slay);
     }
 
     public static void showWork() {
+        System.out.println("1.1 СЛАУ");
         ArrayList<Pair<Double, Double>> f = readF();
         showWork(f);
+        System.out.println();
     }
 }

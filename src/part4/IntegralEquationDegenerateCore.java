@@ -63,7 +63,6 @@ public class IntegralEquationDegenerateCore {
          ArrayList<Double> y = new ArrayList<>();
          ArrayList<Double> q = methodGauss0(getSLAY());
          ArrayList<Double> f = getF(x);
-         System.out.println(q);
          double sum;
          int j = 0;
          for (double xi : x) {
@@ -78,6 +77,7 @@ public class IntegralEquationDegenerateCore {
     }
 
     public static void showWork() {
+        System.out.println("4.1 Решения интегрального уравнения Фредгольма в случае вырожденного ядра");
         ArrayList<Double> x =  getX();
         ArrayList<Double> y = getY(x);
         getTable(x, getYTochnoe(x), y);

@@ -45,7 +45,7 @@ public class MethodSimpleIteration {
     }
 
     public static void showWork() {
-        System.out.println("!!!!!!!!!!!!!!!!!МЕТОД ПРОСТЫХ ИТЕРАЦИЙ!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("2.4 МЕТОД ПРОСТЫХ ИТЕРАЦИЙ");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите n: ");
         int n  = scanner.nextInt();
@@ -63,5 +63,6 @@ public class MethodSimpleIteration {
         System.out.println(method.getFirst());
         System.out.print("Количество итераций: ");
         System.out.println(method.getSecond());
+        System.out.println();
     }
 }

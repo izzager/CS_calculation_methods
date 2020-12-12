@@ -60,6 +60,7 @@ public class EulerMethods {
     }
 
     public static void showWork() {
+        System.out.println("3.1 Метод Эйлера решения задачи Коши для ОДУ первого порядка");
         ArrayList<Double> x = getXWithH(1.0, 10, h);
         ArrayList<Double> yt = getYTochonoe(1.0, 10);
         ArrayList<Double> y1 = methodEuler(1.0, 4.0, 10);

@@ -121,10 +121,13 @@ public class Splain {
     public static void showWork(ArrayList<Pair<Double, Double>> f) {
         ArrayList<Double> x = methodGauss0(Splain.getSLAYSplain(f));
         System.out.println(x);
+        System.out.println();
     }
 
     public static void showWork() {
+        System.out.println("1.4 Интерполяция кубическими сплайнамм");
         ArrayList<Pair<Double, Double>> f = readF();
         showWork(f);
+        System.out.println();
     }
 }

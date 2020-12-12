@@ -1,4 +1,13 @@
+import part2.Determinant;
+import part2.Gauss;
+import part2.MethodProgonki;
+import part2.MethodSimpleIteration;
+import part3.DifferenceMethod;
+import part3.EulerMethods;
+import part3.OdnorodnayaZadacha;
+import part3.UndefinedCoefficientsMethod;
 import part4.IntegralEquationDegenerateCore;
+import part4.QudraturMethod;
 
 import static part4.IntegralEquationDegenerateCore.getX;
 
@@ -17,22 +26,24 @@ public class Main {
         //Splain.print(f);
         //Splain.showWork();
 
-        //Gauss.showWork();
+        Gauss.showWork();
 
-        //Determinant.showWork();
+        Determinant.showWork();
 
-        //MethodProgonki.showWork();
+        MethodProgonki.showWork();
 
-        //MethodSimpleIteration.showWork();
+        MethodSimpleIteration.showWork();
 
-        //EulerMethods.showWork();
+        EulerMethods.showWork();
 
-        //DifferenceMethod.showWork();
+        DifferenceMethod.showWork();
 
-        //OdnorodnayaZadacha.showWork();
+        OdnorodnayaZadacha.showWork();
 
-        //UndefinedCoefficientsMethod.showWork();
+        UndefinedCoefficientsMethod.showWork();
 
         IntegralEquationDegenerateCore.showWork();
+
+        QudraturMethod.showWork();
     }
 }

@@ -78,7 +78,7 @@ public class MethodProgonki {
     }
 
     public static void showWork() {
-        System.out.println("!!!!!!!!!!!!!!!!!МЕТОД ПРОГОНКИ!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("2.3 МЕТОД ПРОГОНКИ");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите n: ");
         int n  = scanner.nextInt();
@@ -97,5 +97,6 @@ public class MethodProgonki {
         System.out.println(pryamProg.getSecond());
         System.out.println("Результат метода прогонки");
         System.out.println(methodProgonki(matrA, d));
+        System.out.println();
     }
 }

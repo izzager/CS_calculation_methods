@@ -65,6 +65,7 @@ public class OdnorodnayaZadacha {
     }
 
     public static void showWork() {
+        System.out.println("3.3 Сведение краевой задачи с неоднородными краевыми условиями к задаче с однор.усл.");
         int n = 10;
         ArrayList<Double> x = getXWithH(n, h);
         ArrayList<ArrayList<Double>> scheme = getDifferenceScheme(n, getXWithHWithoutFirstAndLast(x), h);
