@@ -1,3 +1,7 @@
+import Pair.Pair;
+import part1.Lagrange;
+import part1.Newton;
+import part1.Splain;
 import part2.Determinant;
 import part2.Gauss;
 import part2.MethodProgonki;
@@ -8,13 +12,16 @@ import part3.OdnorodnayaZadacha;
 import part3.UndefinedCoefficientsMethod;
 import part4.IntegralEquationDegenerateCore;
 import part4.QudraturMethod;
+import utilits.Utilits;
 
-import static part4.IntegralEquationDegenerateCore.getX;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+    private final static Integer i = 3;
 
     public static void main(String[] args) {
-        //ArrayList<java.Pair<Double, Double>> f = Utilits.readF();
+        //ArrayList<Pair<Double, Double>> f = Utilits.readF();
         //int n = f.size() - 1;
 
         //Utilits.printF(f);
@@ -27,6 +34,7 @@ public class Main {
         //Splain.showWork();
 
         Gauss.showWork();
+        //Gauss.print(5);
 
         Determinant.showWork();
 

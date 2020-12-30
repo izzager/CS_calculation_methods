@@ -38,7 +38,7 @@ public class Lagrange {
     }
 
     public static void print(ArrayList<Pair<Double, Double>> f) {
-        System.out.println("1.2 Интерполяционный многочлен в форме Ньютона");
+        System.out.println("1.2 Интерполяционный многочлен в форме Лагранжа");
         ArrayList<Pair<Double, Double>> L = getLagrange(f); //результаты подсчетов для каждого х методов Лагранжа
         //выводим результаты подсчетов для каждого х
         System.out.println("Результат для метода Лагранжа: ");

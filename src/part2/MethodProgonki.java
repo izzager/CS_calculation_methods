@@ -84,7 +84,10 @@ public class MethodProgonki {
         int n  = scanner.nextInt();
         System.out.println("Матрица А");
         ArrayList<ArrayList<Double>> matrA = getMatrProgonka4(n);
-        System.out.println(matrA);
+        //System.out.println(matrA);
+        for (ArrayList<Double> ar : matrA) {
+            System.out.println(ar);
+        }
         System.out.println("X, которые должны получиться");
         ArrayList<Double> str = getStrVariant(n);
         System.out.println(str);

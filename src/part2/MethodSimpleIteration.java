@@ -51,7 +51,10 @@ public class MethodSimpleIteration {
         int n  = scanner.nextInt();
         System.out.println("Матрица А");
         ArrayList<ArrayList<Double>> matrA = getMatrAVariant(n);
-        System.out.println(matrA);
+        //System.out.println(matrA);
+        for (ArrayList<Double> ar : matrA) {
+            System.out.println(ar);
+        }
         System.out.print("X, которые должны получиться: ");
         ArrayList<Double> str = getStrVariant(n);
         System.out.println(str);
@@ -63,6 +66,7 @@ public class MethodSimpleIteration {
         System.out.println(method.getFirst());
         System.out.print("Количество итераций: ");
         System.out.println(method.getSecond());
+        System.out.println("Погрешность" + EPSILON);
         System.out.println();
     }
 }

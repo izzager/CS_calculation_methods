@@ -71,6 +71,7 @@ public class QudraturMethod {
             y.add(f.get(j) - sum);
             j++;
         }
+
         return y;
     }
 

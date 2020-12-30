@@ -194,20 +194,35 @@ public class Determinant {
         System.out.print("x: ");
         System.out.println(xs);
         System.out.print("A: ");
-        System.out.println(matrA);
+        for (ArrayList<Double> ar : matrA) {
+            System.out.println(ar);
+        }
+        //System.out.println(matrA);
         System.out.print("det A: ");
         System.out.println(Determinant.getDeterminant(matrA));
         System.out.print("A^(-1): ");
-        System.out.println(Determinant.getObratnMatr(matrA));
+        ArrayList<ArrayList<Double>> matrA1 = getObratnMatr(matrA);
+        for (ArrayList<Double> ar : matrA1) {
+            System.out.println(ar);
+        }
+        //System.out.println(Determinant.getObratnMatr(matrA));
         System.out.print("A^(-1): ");
-        System.out.println(getObrMatrMulti(matrA));
+        ArrayList<ArrayList<Double>> matrA1m = getObrMatrMulti(matrA);
+        for (ArrayList<Double> ar : matrA1m) {
+            System.out.println(ar);
+        }
+        //System.out.println(getObrMatrMulti(matrA));
         System.out.println("!!!!!!!НАХОЖДЕНИЕ Х ЧЕРЕЗ УМНОЖЕНИЕ НА ОБРАТНУЮ МАТРИЦУ, ПОЛУЧЕННУЮ ИЗ МИНОРОВ!!!!!!");
         System.out.println(Determinant.getX(matrA, strB));
         System.out.println("!!!!!!!НАХОЖДЕНИЕ Х ЧЕРЕЗ УМНОЖЕНИЕ НА ОБРАТНУЮ МАТРИЦУ, ПОЛУЧЕННУЮ ПОСТОЛБЦОВО!!!!!!");
         System.out.println(Determinant.getXWithoutDeterm(matrA, strB));
-        System.out.println("Проверка того, что постолбцовая матрицу удовлетворяет свойству A*A-1=E и наоборот");
-        System.out.println(make0(multMatrMatr(matrA, getObrMatrMulti(matrA))));
-        System.out.println(make0(multMatrMatr(getObrMatrMulti(matrA), matrA)));
+        System.out.println("Проверка того, что постолбцовая матрица удовлетворяет свойству A*A-1=E");
+        //System.out.println(make0(multMatrMatr(matrA, getObrMatrMulti(matrA))));
+        matrA1m = make0(multMatrMatr(getObrMatrMulti(matrA), matrA));
+        for (ArrayList<Double> ar : matrA1m) {
+            System.out.println(ar);
+        }
+        //System.out.println(make0(multMatrMatr(getObrMatrMulti(matrA), matrA)));
         System.out.println();
     }
 }
